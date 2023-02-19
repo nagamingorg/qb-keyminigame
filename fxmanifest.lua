@@ -1,17 +1,19 @@
 fx_version 'cerulean'
 game 'gta5'
-
-description 'QB-KeyMiniGame'
-version '1.0.0'
-
-ui_page 'html/index.html'
-
-client_script 'client/main.lua'
-
+description 'QB-VehicleKeys'
+version '1.2.0'
+ui_page 'NUI/index.html'
 files {
-    'html/index.html',
-    'html/app.js',
-    'html/style.css',
+    'NUI/index.html',
+    'NUI/style.css',
+    'NUI/script.js',
+    'NUI/images/*',
 }
-
+shared_scripts {
+    '@qb-core/shared/locale.lua',
+    'locales/*.lua',
+    'config.lua',
+}
+client_script 'client/main.lua'
+server_script 'server/main.lua'
 lua54 'yes'
